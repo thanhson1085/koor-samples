@@ -1,0 +1,24 @@
+#ifndef __USER_CONFIG_H__
+#define __USER_CONFIG_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+	// UART config
+	#define SERIAL_BAUD_RATE 57600
+
+        // WIFI config
+        #define WIFI_SSID "PleaseEnterWifiSSID"
+        #define WIFI_PWD "PleaseEnterWifiPassword"
+
+        // MQTT config
+        #define MQTT_HOST "PleaseEnterMQTTHost"
+        #define MQTT_PORT 1883
+        #define MQTT_TOPIC "PleaseEnterMQTTTopic"
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
