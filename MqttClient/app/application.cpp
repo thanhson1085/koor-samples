@@ -49,7 +49,7 @@ void connectOk()
 	startMqttClient();
 
 	// Start publishing loop
-	procTimer.initializeMs(20 * 1000, publishMessage).start(); // every 20 seconds
+	procTimer.initializeMs(5 * 1000, publishMessage).start(); // every 5 seconds
 }
 
 // Will be called when WiFi station timeout was reached
