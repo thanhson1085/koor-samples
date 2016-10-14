@@ -1,12 +1,7 @@
-#include <user_config.h>
+#include <config.h>
+#include <app.h>
 #include <SmingCore/SmingCore.h>
 #include <Libraries/DHT/DHT.h>
-
-// If you want, you can define WiFi settings globally in Eclipse Environment Variables
-#ifndef WIFI_SSID
-	#define WIFI_SSID "xxxx" // Put you SSID and Password here
-	#define WIFI_PWD "xxxx"
-#endif
 
 Timer procTimer;
 int sensorValue = 0;
@@ -115,7 +110,7 @@ void sendData()
 
 	// DHT end
 	blink();
-	koorIO.downloadString("http://xxxx.koor.io/api/test?chanel1=" + String(t) + "&chanel2=" + String(h), onDataSent);
+	koorIO.downloadString(String(HTTP_URL) + "?" + String(CHANEL_ONE) + "=" + String(t) + "&" + String(CHANEL_TWO) + "=" + String(h), onDataSent);
 	blink();
 }
 
