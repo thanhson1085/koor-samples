@@ -19,7 +19,7 @@ void publishMessage()
 		startMqttClient(); // Auto reconnect
         randValue = rand() % 100;
 	Serial.println("Let's publish message now!");
-	mqtt.publish(MQTT_TOPIC, String(randValue)); // or publishWithQoS
+	mqtt.publish(MQTT_TOPIC, String(randValue)); 
 }
 
 // Callback for messages, arrived from MQTT server
@@ -56,8 +56,6 @@ void connectOk()
 void connectFail()
 {
 	Serial.println("I'm NOT CONNECTED. Need help :(");
-
-	// .. some you code for device configuration ..
 }
 
 void init()
